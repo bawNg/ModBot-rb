@@ -1,24 +1,24 @@
 ### Template formatting ###
 #
 # $var_name -- variables
-# #B        -- toggle bold
-# #U        -- toggle underline
-# #O        -- origional
-# #R        -- reversed
-# #C03,43   -- set colour codes
+# %B        -- toggle bold
+# %U        -- toggle underline
+# %O        -- origional
+# %R        -- reversed
+# %C03,43   -- set colour codes
 
 topic:
-  base: '#C14-= #BModBot#B =- ( type !help for a list of commands and !news for news )'
-  seperator: ' #C14-#O '
+  base: '%C14-= %BModBot%B =- ( type !help for a list of commands and !news for news )'
+  seperator: ' %C14-%O '
   default: Development channel
 
 channel:
   join:
-    - 'Welcome to #B$channel#B! Type !help for available commands. Enjoy your stay.'
+    - 'Welcome to %B$channel%B! Type !help for available commands. Enjoy your stay.'
     - 'Please note: This bot is still under development and is not yet complete.'
 
 news:
-  header: '#B$channel#B news'
+  header: '%B$channel%B news'
   line: o $date * $body ($author)
   added: Added article.
   removed: Removed article [$body].
@@ -32,7 +32,7 @@ user:
   multiple_matches: Your input matched multiple users. Try again with a unique value.
 
 general:
-  uptime: '#C14I have been up for #B$days#B days, #B%hours#B hours, #B$minutes#B minutes, #B$seconds#B seconds.'
+  uptime: '%C14I have been up for %B$days%B days, %B%hours%B hours, %B$minutes%B minutes, %B$seconds%B seconds.'
   unable_to_parse: Unable to parse value [$value].
   command_timeout: Please wait a few seconds before using this command again.
   unknown_command: '$command is an unknown command. For the list of commands use: !help'
